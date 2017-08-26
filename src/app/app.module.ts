@@ -12,6 +12,7 @@ import { ShopPage } from '../pages/shop/shop';
 import { BuyoutPage } from '../pages/buyout/buyout';
 
 @NgModule({
+  // Declare our component.
   declarations: [
     MyApp,
     HomePage,
@@ -26,6 +27,7 @@ import { BuyoutPage } from '../pages/buyout/buyout';
   ],
   // ionic starts with its own IonicApp
   bootstrap: [IonicApp],
+  // Tell Ionic to create compomemt factory for us.
   entryComponents: [
     MyApp,
     HomePage,

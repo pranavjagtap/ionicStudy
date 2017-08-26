@@ -12,8 +12,8 @@ export class ShopPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  onGoToBuyout(name: string) {
-    this.navCtrl.push(BuyoutPage, {itemName: name});
+  onBuy(productData: {name: string, quantity: number}) {
+    this.navCtrl.push(BuyoutPage, productData);
   }
 
 }

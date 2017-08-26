@@ -7,16 +7,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'buyout.html',
 })
 export class BuyoutPage implements OnInit {
-  name: string;
+  productData: {name:string, quantity: number};
 
   ngOnInit() {
-    this.name = this.navParams.get('itemName');
+    this.productData = this.navParams.data;
   }
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  onGoToHomePage() {
+  onConfirmPurchase() {
+    // We cannot pass data while using pop out functionality.
+    // For this we need to use angular services, which we will add later.
     this.navCtrl.popToRoot();
   }
 
