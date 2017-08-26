@@ -29,3 +29,16 @@ Now if we pop a page from above stack it will display Page2 an dstack will be li
 
 We can use popToRoot() which will take us to the bottom of the stack and will remove all i.e. pop out all pages above Root page. And our stack will look like below,
         Page1 - top and bottom of stack
+
+
+# pop()
+    // We cannot pass data while using pop out functionality.
+    // For this we need to use angular services, which we will add later.
+
+
+To navigate between pages without passing any data across pages we can use below directives provided by Ionic. These directives help reduce code in ts file.
+
+[navPush]
+        Since we need to mention the Page name which we need to go to i.e. push to stack hence we are using square brackets for navPush directive.
+navPop
+        Pop out current Page and display previous Page

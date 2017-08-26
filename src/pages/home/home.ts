@@ -9,6 +9,8 @@ import { ShopPage } from '../shop/shop';
 })
 export class HomePage {
 
+  usersPage: UsersPage;
+
   // Constructor is injecting Navcontroller
   constructor(public navCtrl: NavController) {}
 

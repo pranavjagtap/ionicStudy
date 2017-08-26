@@ -8,8 +8,15 @@
 
 <ion-content padding>
     <button ion-button (click)="onLoadUser('Max')">User 'Max'</button>
-    <br/>
+    <hr/>
     <button ion-button (click)="onLoadUser('Anna')">User 'Anna'</button>
+    <hr/>
+
+    <!--
+      navPop is a helpful directive to take us back to previous screen, without
+      passing any data.
+    -->
+    <button ion-button navPop>Go back</button>
 </ion-content>
 <ion-footer padding>
   <p>The Footer</p>

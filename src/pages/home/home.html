@@ -9,4 +9,14 @@
 <ion-content padding>
   <button ion-button (click)="onGoToUsers()" >Users</button>
   <button ion-button (click)="onGoToShop()" >Shop</button>
+  <hr/>
+
+  <!--
+    This functionality is not working i.e. opening a Page using navPush directive
+    Actually navPush is a directive which takes some data i.e. PageName
+    So navPush is having square bracket against it.
+    And usersPage is a variable defined in home.ts file which has reference to the UsersPage class
+  -->
+  <button ion-button [navPush]="usersPage"> Home using Directive</button>
+
 </ion-content>
