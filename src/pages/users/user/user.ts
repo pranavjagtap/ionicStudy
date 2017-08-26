@@ -8,12 +8,6 @@ import { NavParams, NavController } from "ionic-angular";
 
 // OnInit is anguylar lifecycle hook
 export class UserPage implements OnInit {
-    // gets called before the template gets rendered, because we are reflecting the data on templates for now.
-    // so its better to retrive the data at this point instead of retrieving
-    //  the data in constructor (which might gets called when we push the Page to NavController). 
-    ngOnInit() {
-        this.name = this.navParams.get('userName');
-    }
     name: string;
 
     // NavParams will allow us to retireve the data passed to this page while its been called. 
@@ -22,11 +16,18 @@ export class UserPage implements OnInit {
                 private navCtrl: NavController){
     }
 
+    // gets called before the template gets rendered, because we are reflecting the data on templates for now.
+    // so its better to retrive the data at this point instead of retrieving
+    //  the data in constructor (which might gets called when we push the Page to NavController). 
+    ngOnInit() {
+        this.name = this.navParams.get('userName');
+    }
+
     onGoBack() {
         // pop will pop out the last visited page.
-        this.navCtrl.pop();
+        // this.navCtrl.pop();
 
         // We can also go directly to Root page and remove all pages above Root page from stack using popToRoot() function.
-        // this.navCtrl.popToRoot();
+        this.navCtrl.popToRoot();
     }
 }
