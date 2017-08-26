@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { NavParams } from "ionic-angular";
+import { NavParams, NavController } from "ionic-angular";
 
 @Component({
     selector: 'page-user',
@@ -17,8 +17,16 @@ export class UserPage implements OnInit {
     name: string;
 
     // NavParams will allow us to retireve the data passed to this page while its been called. 
-    constructor (private navParams: NavParams){
-
+    // Inorder to go to any other page we need to pass NavController to the constructor.
+    constructor (private navParams: NavParams,
+                private navCtrl: NavController){
     }
 
+    onGoBack() {
+        // pop will pop out the last visited page.
+        this.navCtrl.pop();
+
+        // We can also go directly to Root page and remove all pages above Root page from stack using popToRoot() function.
+        // this.navCtrl.popToRoot();
+    }
 }
