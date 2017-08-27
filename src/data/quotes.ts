@@ -16,6 +16,21 @@ export default [
         id: '3',
         person: 'Robert H. Schuller',
         text: 'What great thing would you attempt if you knew you could not fail?'
+      },
+      {
+        id: '11',
+        person: 'Theodore Roosevelt',
+        text: 'Believe you can and you\'re halfway there'
+      },
+      {
+        id: '21',
+        person: 'Norman Vincent Peale',
+        text: 'Change your thoughts and you change your world.'
+      },
+      {
+        id: '31',
+        person: 'Robert H. Schuller',
+        text: 'What great thing would you attempt if you knew you could not fail?'
       }
     ],
     icon: 'brush'

@@ -22,8 +22,19 @@
       #{{i+1}}
     </ion-card-header>
     <ion-card-content>
-      {{quote.text}}
+      <p>{{quote.text}}</p>
+      <p class="author">{{quote.person}}</p>
     </ion-card-content>
+    <ion-row>
+      <!--Not providing any width value so that the column will take up the whole screen-->
+      <ion-col text-right>
+        <!--
+           Check more button styles in online documentation.
+           One type of button is "clear" which is used below.
+        -->
+        <button ion-button clear small>Favorite</button>
+      </ion-col>
+    </ion-row>
   </ion-card>
   <!--{{ quoteGroup.quotes[0]}}-->
   <!--{{ quotes[0].id }}
