@@ -7,12 +7,24 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>library</ion-title>
+    <ion-title>Quotes Library</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
+<!--Load all quotes and display it-->
 <ion-content padding>
-
+    <h3 text-center>Select your favorite quote</h3>
+    <!-- Mostly we use ion-list to list data when we are using ngfor-->
+    <ion-list>
+      <!-- ion-item helps button to get converted to a proper list splitted to multuiple lines -->
+      <!-- see how button renders data with and without ion-item for getting the feel -->
+      <button ion-item *ngFor="let quoteGroup of quoteCollection">
+        <!-- We can tell each item inside ion-item how it should get aligned inside the ion-item -->
+        <!-- item-left says that position this element (ion-icon) to left if its placed insode the ion-item element -->
+        <ion-icon [name]="quoteGroup.icon" item-left></ion-icon>
+        <h2> {{ quoteGroup.category | uppercase}} </h2>
+        <p> {{ quoteGroup.quotes.length}} Quotes</p>
+      </button>
+    </ion-list>
 </ion-content>
