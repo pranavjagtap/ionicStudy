@@ -8,7 +8,6 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
 @NgModule({
-  // Declare our component.
   declarations: [
     MyApp,
     HomePage
@@ -17,9 +16,7 @@ import { HomePage } from '../pages/home/home';
     BrowserModule,
     IonicModule.forRoot(MyApp)
   ],
-  // ionic starts with its own IonicApp
   bootstrap: [IonicApp],
-  // Tell Ionic to create compomemt factory for us.
   entryComponents: [
     MyApp,
     HomePage
