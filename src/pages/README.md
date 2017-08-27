@@ -42,3 +42,37 @@ To navigate between pages without passing any data across pages we can use below
         Since we need to mention the Page name which we need to go to i.e. push to stack hence we are using square brackets for navPush directive.
 navPop
         Pop out current Page and display previous Page
+
+
+
+# Handling multiple stacks of pages.
+
+Case 1
+
+Two Tabs added to a Page.
+Say, TabsPage exists with two tabs as below
+                    TabsPage
+        Leftlink                RightLink
+
+LeftLink connects to  --> Page1
+RightLink connects to --> Page2
+
+----------------------------------------------
+
+Case 2
+
+Side Drawer opened from left side on any Page
+link1
+link2
+link3
+
+
+link1 connects to --> Page1
+link2 connects to --> Page2
+
+----------------------------------------------
+----------------------------------------------
+In both this scenario original page and either 
+of the tab linked page exists on the stack.
+----------------------------------------------
+
