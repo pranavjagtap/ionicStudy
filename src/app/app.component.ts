@@ -3,13 +3,13 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
+import { FavoritesPage } from '../pages/favorites/favorites';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  // root page is initialized to HomePage
-  rootPage:any = HomePage;
+  // root page is initialized to FavoritesPage
+  rootPage:any = FavoritesPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
